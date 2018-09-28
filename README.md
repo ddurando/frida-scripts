@@ -7,5 +7,5 @@ $ python conn_pid.py <script-name> <pid_number>
 ```
 or by attaching them at startup when launching the appby package name with the `conn_startup.py`:
 ```
-$ python copnn_startup.py <script-name> <package_name>
+$ python conn_startup.py <script-name> <package_name>
 ```
