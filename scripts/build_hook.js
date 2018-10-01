@@ -1,17 +1,13 @@
 console.log("[+] FRIDA init")
+console.log("[+] Hook Build Information")
 setImmediate(function(){
     Java.performNow(function() {
-        ['java.lang.StringBuilder', 'java.lang.StringBuffer'].forEach(function(clazz, i) {
-          console.log('[?] ' + i + ' = ' + clazz);
-          var func = 'toString';
-          Java.use(clazz)[func].implementation = function() {
-            var ret = this[func]();
-            send('[' + i + '] ' + ret);
-
-          }
-          return ret;
-       
-      });
-})
+        var MyBuild = Java.use("android.os.Build");
+        myBuild.HARDWARE.value = "TestHardware";
+        myBuild.FINGERPRINT.value = "TestFingerprint";
+        myBuild.DEVICE.value = "TestDevice";
+        myBuild.BOARD.value = "TestBoard";
+        myBuild.MODEL.value = "TestModel";
+    });
 });
     
