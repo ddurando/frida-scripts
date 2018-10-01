@@ -1,4 +1,6 @@
 console.log("[+] FRIDA init")
+console.log("[+] Hook SmsManager.sendTextMessage()")
+
 setImmediate(function(){
     Java.performNow(function(){
         console.log("[*] 'SmsManager.sendTextMessage' hooked successfully");
