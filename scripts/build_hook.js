@@ -1,5 +1,6 @@
 console.log("[+] FRIDA init")
 console.log("[+] Hook Build Information")
+
 setImmediate(function(){
     Java.performNow(function() {
         var MyBuild = Java.use("android.os.Build");
