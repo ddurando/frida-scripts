@@ -5,7 +5,7 @@ the scripts are started by either attaching them to a running process with the `
 ```
 $ python conn_pid.py <script-name> <pid_number>
 ```
-or by attaching them at startup when launching the appby package name with the `conn_startup.py`:
+or by attaching them at startup when launching the app by package name with the `conn_startup.py` script:
 ```
 $ python conn_startup.py <script-name> <package_name>
 ```
